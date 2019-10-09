@@ -1,3 +1,13 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'home#index'
+  resources :resumes do
+    resources :educations, :skills, :jobs
+  end
+  resources :jobs do
+    resources :achievments, :resonsibilities
+  end
+  resources :posts
+  resources :projects
 end

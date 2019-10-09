@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 class Skill < ApplicationRecord
-  has_many :resume, through: :resume_skills
+  belongs_to :resume
   validates :name, presence: true
 end

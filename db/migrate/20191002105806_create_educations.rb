@@ -7,6 +7,7 @@ class CreateEducations < ActiveRecord::Migration[6.0]
       t.string :institution, null: false
       t.string :begin_date, null: false
       t.string :end_date, null: false
+      t.integer :resume_id, null: false
 
       t.timestamps
     end

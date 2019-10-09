@@ -1,6 +1,10 @@
 {
   "name": "resume",
   "private": true,
+  "engines": {
+  "node": ">=6.0.0",
+  "yarn": ">=0.25.2"
+  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/activestorage": "^6.0.0-alpha",

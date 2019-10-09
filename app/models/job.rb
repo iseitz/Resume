@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 class Job < ApplicationRecord
-  has_many :resumes through: :resume_jobs
-  has_many :responsibilities, through: :job_responsibilities
-  has_many :achievments, through: :job_achievments
+  belongs_to :resume
+  has_many :responsibilities
+  has_many :achievments
+  validates :company, presence: true
   validates :begin_date, presence: true
   validates :end_date, presence: true
   validates :city, presence: true

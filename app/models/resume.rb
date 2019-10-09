@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 class Resume < ApplicationRecord
+  has_many :resume_skills
   has_many :skills, through: :resume_skills
+  has_many :resume_jobs
   has_many :jobs, through: :resume_jobs
+  has_many :resume_educations
   has_many :educations through: :resume_educations
   validates :name, presence: true
   validates :telephone, presence: true, length: { minimum: 11, maximum: 12 },  format: { with: /[0-9]+/ }
